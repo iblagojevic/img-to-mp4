@@ -20,12 +20,19 @@ parts/
 sdist/
 var/
 wheels/
+bin/
+include/
+input/
+lib/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
+*.mp3
+*.mp4
+pyvenv.cfg
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
