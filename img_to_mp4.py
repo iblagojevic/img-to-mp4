@@ -83,7 +83,11 @@ def prepare_images(input_directory, output_directory):
 
 
 def create_video(image_dir):
-    filenames = next(walk(image_dir), (None, None, []))[2]
+    filenames = []
+    for _, _, files in os.walk(image_dir):
+        for f in files:
+            filenames.append(f)
+    filenames.sort()
     durations = [int(f.split("-")[1]) for f in filenames]
     loops = []
     filters = []
