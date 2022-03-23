@@ -16,7 +16,7 @@ Another dependency is `ffmpeg` command line tool, which can be installed from ht
 
 ### Usage
 
-Put all images in one directory on the local filesystem and name them using following pattern:
+Put all input images in one directory on the local filesystem and name them using following pattern:
 
 `<ORDER OF IMAGE IN VIDEO WITH LEADING ZEROES>-<DURATION OF FRAME IN SECONDS>-<TITLE YOU WANT TO APPEAR IN FRAME>.<FILE EXTENSION>`. 
 
