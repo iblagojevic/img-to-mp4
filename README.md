@@ -1,6 +1,8 @@
 # img-to-mp4
 
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 Python 3 command line tool for converting images into mp4 video/slideshow with optional audio and frame titles.
 
@@ -16,7 +18,7 @@ Another dependency is `ffmpeg` command line tool, which can be installed from ht
 
 ### Usage
 
-Put all images in one directory on the local filesystem and name them using following pattern:
+Put all input images in one directory on the local filesystem and name them using following pattern:
 
 `<ORDER OF IMAGE IN VIDEO WITH LEADING ZEROES>-<DURATION OF FRAME IN SECONDS>-<TITLE YOU WANT TO APPEAR IN FRAME>.<FILE EXTENSION>`. 
 
