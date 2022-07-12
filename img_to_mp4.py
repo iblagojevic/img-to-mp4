@@ -95,9 +95,9 @@ def create_video(image_dir):
     for i, filename in enumerate(filenames):
         loops.append(f'-loop 1 -t {durations[i]} -i "{image_dir}/{filename}"')
         if i == 0:
-            filters.append(f"[{i}:v]scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=out:st=4:d=1[v{i}];")
+            filters.append(f"[{i}:v]scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=out:st={durations[i] - 1}:d=1[v{i}];")
         else:
-            filters.append(f"[{i}:v]scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v{i}];")
+            filters.append(f"[{i}:v]scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=in:st=0:d=1,fade=t=out:st={durations[i] - 1}:d=1[v{i}];")
         filter_end.append(f"[v{i}]")
 
     a1 = " ".join(loops)
